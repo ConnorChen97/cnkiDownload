@@ -9,5 +9,11 @@ https://registry.npmmirror.com/binary.html?path=chromedriver/
 
 > 查看chrome版本：chrome://version/
 
-4. 启动程序
+4. 创建user.json
+{
+   "username":"",
+   "password":""
+}
+
+5. 启动程序
 npm run start
