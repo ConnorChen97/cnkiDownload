@@ -1,6 +1,6 @@
 const { Builder, By } = require('selenium-webdriver');
 const { papers } = require('./paper.json');
-const { USERNAME, PASSWORD } = require('./user.json');
+const { username, password } = require('./user.json');
 
 const sleep = async (time) => {
     await new Promise(res => setTimeout(res, time));
@@ -8,8 +8,8 @@ const sleep = async (time) => {
 
 const login = async (driver) => {
     await driver.get('https://ersp.lib.whu.edu.cn/s/net/cnki/www/G.https');
-    await driver.findElement(By.id('username')).sendKeys(USERNAME);
-    await driver.findElement(By.id('password')).sendKeys(PASSWORD);
+    await driver.findElement(By.id('username')).sendKeys(username);
+    await driver.findElement(By.id('password')).sendKeys(password);
     await sleep(500);
     await driver.findElement(By.className('auth_login_btn primary full_width')).click();
     await sleep(3000);
